@@ -1,23 +1,24 @@
-import Vue from "vue";
-import VueRouter from "vue-router";
+import Vue from 'vue'
+import VueRouter from 'vue-router'
 
-Vue.use(VueRouter);
+Vue.use(VueRouter)
 
 const routes = [
   {
-    path: "/",
-    name: "home",
-    component: () => import("../views/Home.vue")
+    path: '/',
+    name: 'home',
+    component: () => import('../views/Home.vue'),
   },
   {
-    path: "/secondPage",
-    name: "second_page",
-    component: () => import("../views/SecondPage.vue")
-  }
-];
+    path: '/secondPage',
+    name: 'second_page',
+    component: () => import('../views/SecondPage.vue'),
+  },
+]
 
 const router = new VueRouter({
-  routes
-});
+  mode: 'history',
+  routes,
+})
 
-export default router;
+export default router
